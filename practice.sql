@@ -1,12 +1,16 @@
 
 
-select * from call_Start_logs
-
-select 'hi' 
-
 
 
 /*
+
+-------------------emp salary more than manager's--------------
+
+select e1.emp_name
+from emp_manager e1
+join emp_manager e2
+on e1.manager_id=e2.emp_id and e1.salary>e2.salary
+
 ----------------------busiest route---------------------------
 
 select origin, destination, sum(ticket_count) total_ticket_count
